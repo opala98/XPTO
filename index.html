@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400&display=swap');
+    </style>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" 
+    rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" 
+    crossorigin="anonymous">
+
+    <link rel="stylesheet" href="style.css">
+
+
+    <title>XPTO | Página inicial</title>
+</head>
+<body>
+
+<div id="main">
+    <nav class="col-10">
+
+        <div class="input col-5">
+            <input id="inp-p" type="text" placeholder="Pesquise por nome do produto">
+            <button id="search" onclick="search_product()"></button>
+        </div>
+
+    </nav>
+
+    <main class="col-10">
+
+        <aside class="col-2">
+
+                <label>Categoria:</label>
+                <br><br>
+
+                <label onclick="filtrar_n()"> 
+                    <input type="radio" name="tipo" id="nenhum" value="nenhum" checked="true">
+                    Nenhum
+                </label>
+                <br>
+
+                <label onclick="filtrar_e()"> 
+                    <input type="radio" name="tipo" id="ex" value="exclusivo">
+                    Exclusivo
+                </label>
+                <br>
+
+                <label onclick="filtrar_p()"> 
+                    <input type="radio" name="tipo" id="promo" value="promocao">
+                    Promoção
+                </label>
+                <br>
+
+                <label onclick="filtrar_f()"> 
+                    <input type="radio" name="tipo" id="fav" value="favorito">
+                    Favorito
+                </label>
+                <br><br>
+
+        </aside>
+
+        <section class="col-10">
+
+            <div class="promocao produto card col-3" id="p1" name="Fone Bluetooth XPTO">
+                <img onclick="product1()" src="https://i.imgur.com/ZwIhQDO.jpg" alt="..." class="card-img-top">
+                <div class="card-body">
+                    <h3 class="name_product" onclick="product1()">Fone Bluetooth XPTO</h3>
+                    
+                    <img onclick="return fav(this.id)" class="star col-12" name="img-f" id="fav1" src="img/star_S.png" alt="...">
+
+                    <br>
+                    <span class="valor">R$ 198,00</span>
+                    <p class="tipo">Produto em promoção!</p>
+                    <p>Aparelho intra auricular de som em alta definição sem fio para os viciados de plantão</p>
+                </div>
+            </div>
+
+            <div class="promocao produto card col-3" id="p2" name="Ratoeira Eletrônica XPTO">
+                <img onclick="product2()" src="https://i.imgur.com/JqtRzV2.jpg" alt="..." class="card-img-top">
+                <div class="card-body">
+                    <h3 onclick="product2()" class="name_product">Ratoeira Eletrônica XPTO</h3>
+
+                    <img onclick="return fav(this.id)" class="star col-12" name="img-f" id="fav2" src="img/star_S.png" alt="...">
+
+                    <br>
+                    <span class="valor">R$ 65,70</span>
+                    <p class="tipo">Produto em promoção!</p>
+                    <p>Sistema exclusivo de rearme que possibilita a captura de mais de um rato cada vez que é armada.</p>
+                </div>
+            </div>
+
+            <div class="promocao produto card col-3" id="p3" name="Notebook XPTO">
+                <img onclick="product3()" src="https://i.imgur.com/550ZKEa.jpg" alt="..." class="card-img-top">
+                <div class="card-body">
+                    <h3 class="name_product" onclick="product3()">Notebook XPTO</h3>
+
+                    <img onclick="return fav(this.id)" class="star col-12" name="img-f" id="fav3" src="img/star_S.png" alt="...">
+
+                    <br>
+                    <span class="valor">R$ 2.564,90</span>
+                    <p class="tipo">Produto em promoção!</p>
+                    <p>Onde a brincadeira termina e o jogo começa</p>
+                </div>
+            </div>
+
+        </section>
+
+        <section class="col-10">
+
+            <div class="promocao produto card col-3" id="p4" name="Smartphone XPTO">
+                <img onclick="product4()" src="https://i.imgur.com/mtsY67r.jpg" alt="..." class="card-img-top">
+                <div class="card-body">
+                    <h3 onclick="product4()" class="name_product">Smartphone XPTO</h3>
+
+                    <img onclick="return fav(this.id)" class="star col-12" name="img-f" id="fav4" src="img/star_S.png" alt="...">
+
+                    <br>
+                    <span class="valor">R$ 1.666,00</span>
+                    <p class="tipo">Produto em promoção!</p>
+                    <p>Um deleite cromático. Inspirando-se na magia do céu, o Smartphone XPTO reflete as fascinantes cores da luz</p>
+                </div>
+            </div>
+
+            <div class="promocao produto card col-3" id="p5" name="Caneta XPTO">
+                <img onclick="product5()" src="https://i.imgur.com/APDyP1f.jpg" alt="..." class="card-img-top">
+                <div class="card-body">
+                    <h3 onclick="product5()" class="name_product">Caneta XPTO</h3>
+
+                    <img onclick="return fav(this.id)" class="star col-12" name="img-f" id="fav5" src="img/star_S.png" alt="...">
+
+                    <br>
+                    <span class="valor">R$ 12.398,00</span>
+                    <p class="tipo">Produto em promoção!</p>
+                    <p>Instrumento de escrita XPTO Meisterstück Hommage à W.A. Mozart, com sistema de escrita esferográfica Mozart</p>
+                </div>
+            </div>
+
+            <div class="promocao produto card col-3" id="p6" name="Monitor Gamer XPTO">
+                <img onclick="product6()" src="https://i.imgur.com/Er8mKvB.jpg" alt="..." class="card-img-top">
+                <div class="card-body">
+                    <h3 onclick="product6()" class="name_product">Monitor Gamer XPTO</h3>
+
+                    <img onclick="return fav(this.id)" class="star col-12" name="img-f" id="fav6" src="img/star_S.png" alt="...">
+
+                    <br>
+                    <span class="valor">R$ 2.566,00</span>
+                    <p class="tipo">Produto em promoção!</p>
+                    <p>Monitor Gamer XPTO possui alta qualidade e muitos recursos especiais para os jogadores</p>
+                </div>
+            </div>
+
+        </section>
+
+        <section class="col-10">
+
+            <div class="exclusivo produto card col-3" id="p7" name="Patinete Elétrico XPTO">
+                <img onclick="product7()" src="https://i.imgur.com/GhVWPQj.jpg" alt="..." class="card-img-top">
+                <div class="card-body">
+                    <h3 onclick="product7()" class="name_product">Patinete Elétrico XPTO</h3>
+
+                    <img onclick="return fav(this.id)" class="star col-12" name="img-f" id="fav7" src="img/star_S.png" alt="...">
+
+                    <br>
+                    <span class="valor">R$ 5.698,00</span>
+                    <p class="tipo">Produto exclusivo!</p>
+                    <p>É uma verdadeira ferramenta para a revolução do transporte pessoal!</p>
+                </div>
+            </div>
+
+            <div class="exclusivo produto card col-3" id="p8" name="Guarda-Chuva XPTO">
+                <img onclick="product8()" src="https://i.imgur.com/jl3mWPw.jpg" alt="..." class="card-img-top">
+                <div class="card-body">
+                    <h3 onclick="product8()" class="name_product">Guarda-Chuva XPTO</h3>
+
+                    <img onclick="return fav(this.id)" class="star col-12" name="img-f" id="fav8" src="img/star_S.png" alt="...">
+
+                    
+                    <br>
+                    <span class="valor">R$ 19,90</span>
+                    <p class="tipo">Produto exclusivo!</p>
+                    <p>Abertura e fechamentos automáticos da copa, estrutura em fibra</p>
+                </div>
+            </div>
+
+
+
+        </section>
+
+    </main>
+
+</div>
+
+<div id="ampliar" class="col-10">
+
+    <main class="col-10">
+
+        
+        <div class="" id="info" class="col-10">
+            
+            
+            <span name="" id="hide"></span>
+            <span id="hide2"></span>
+
+            <span id="titulo"></span>
+            <span><img onclick="return fav(this.id)" class="star col-12" name="img-i" id="fav-i" src="img/star_S.png" alt="..."></span>
+            <br>
+            <img id="img_p" src="" alt="...">            
+            <p id="valor"></p>
+            <p id="desc_c"></p>
+            <p id="desc_l"></p>
+            <br><br>
+        </div>
+        
+
+
+        <div class="col-10" id="ficha">
+
+            <p id="tf" >Ficha técnica:</p>
+
+            <span id="t1"></span>
+            <p id="d1"></p>
+            <span id="t2"></span>
+            <p id="d2"></p>
+            <span id="t3"></span>
+            <p id="d3"></p>
+            <span id="t4"></span>
+            <p id="d4"></p>
+            <span id="t5"></span>
+            <p id="d5"></p>
+            <span id="t6"></span>
+            <p id="d6"></p>
+            <br><br>
+        </div>
+
+        <button id="voltar" onclick="voltar()">Voltar</button>
+
+    </main>
+
+</div>
+    
+</body>
+
+<script src="logica.js"></script>
+
+</html>

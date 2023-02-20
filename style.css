@@ -1,0 +1,392 @@
+*{
+    font-family: 'Roboto Slab', serif;
+}
+
+
+body{
+    background-image: linear-gradient(to bottom, rgb(100, 24, 181), rgb(13, 17, 124), rgb(0, 0, 0));
+    background-attachment: fixed;
+}
+
+nav{
+    padding-top: 2%;
+    margin: 0 auto;
+    align-items: center;
+    height: 20vh;
+    background-color: rgba(0, 0, 0, 0.211);
+}
+
+.input{
+    margin: 0 auto;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    padding-left: 10%;
+}
+
+#search{
+    width: 12%;
+    background-image: url(img/lupa.png);
+    background-repeat: no-repeat;
+    background-size: 80% 80%;
+    background-position: center;
+    background-color: white;
+    border: 1px solid #939393;
+    border-radius: 5px;
+}
+
+#search:hover{
+    height: 1.5em;
+    width: 1.5em;
+    margin-top: -0.8%;
+}
+
+#inp-p{
+    width: 62%;
+    border: 1px solid #939393;
+    border-radius: 5px;
+    height: 45px;
+    outline: none;
+    padding-left: 8px;
+}
+
+#inp-p:focus{
+    box-shadow: 0px 0px 7px rgb(255, 255, 255);
+}
+
+main{
+    padding: 2%;
+    margin: 0 auto;
+    align-items: center;
+    height: auto;
+    display:table;
+    background-color: rgba(0, 0, 0, 0.211);
+    color: #fff; 
+}
+
+aside{
+    float: left;
+    /* position: fixed; */
+}
+
+aside > button, #voltar{
+    border-radius: 5px;
+    background-color: rgb(247, 247, 247);
+    height: 40px;
+    border: #b3b3b3 1px solid;
+    color: #000;
+}
+
+.card{
+    cursor: pointer;
+    height: 475px;
+    background-color: #f9f9f9;
+}
+
+.card-body{
+    background-color: #f9f9f900;
+    text-align: justify;
+}
+
+main > section{
+    float: right;
+    color: #000;
+    margin-bottom: 5%;
+}
+
+.valor{
+    text-decoration: underline;
+    font-weight: bold;
+    font-style: italic;
+}
+
+.tipo{
+    font-style: italic;
+}
+
+.star{
+    width: 20px;
+    cursor: pointer;
+    float: right;
+}
+
+#fav-i{
+    float: none;
+    width: 50px;
+}
+
+.promocao > div > .valor{
+    color: rgb(67, 216, 34);
+}
+
+.exclusivo > div > .valor{
+    color: rgb(216, 107, 34);
+}
+
+.card-img-top{
+    height: 150px;
+}
+
+#p1, #p4, #p7{
+    float: left;
+    
+}
+
+#p2, #p3, #p5, #p6, #p8{
+    float: right;
+    margin: 0 auto;
+    margin-right: 8.5%;
+}
+
+#p8{
+    margin-right: 42%;
+}
+
+#ampliar{
+    display: none;
+    padding: 0 5% 0 7%;
+}
+
+#img_p{
+    margin: 0 auto;
+    margin-bottom: 5%;
+    width: 700px;
+    clear: both;
+    /* width: 400px; */
+}
+
+#titulo{
+    font-size: 30pt;
+    font-weight: bolder;
+    padding-bottom: 50px;
+}
+
+span > img{
+    margin-top: -3%;
+}
+
+#info {
+    float: right;
+    text-align: justify;
+    margin-right: 50px;
+}
+
+#ficha{
+    clear: both;
+
+}
+
+/*--------------------------- RESPONSIVIDADE -----------------------*/
+
+@media only screen and (max-width: 1997px) {
+    
+    aside{
+        font-size: 15pt;
+    }
+
+    .card{
+        height: 535px;
+    }
+
+    #inp-p{
+        width: 80%;
+        height: 5em;
+    }
+
+    #inp-p::placeholder{
+        font-size: 17pt;
+    }
+
+    div > p, div > span{
+        font-size: 15pt;
+    }
+    
+}
+
+@media only screen and (max-width: 1569px) {
+    
+    .card{
+        height: 540px;
+    }
+} 
+
+@media only screen and (max-width: 1672px) {
+    
+    #inp-p{
+        width: 80%;
+        height: 4em;
+    }
+
+} 
+
+@media only screen and (max-width: 1667px) {
+
+
+    aside{
+        font-size: 13pt;
+    }
+
+    #tf{
+        font-size: 25pt;
+    }
+
+    #valor, #desc_c, #desc_l, #t1, #t2, #t3, #t4, #t5, #t6, #d1, #d2, #d3, #d4, #d5, #d6{
+        font-size: 13pt;
+    }
+
+    #voltar{
+        width: 100px;
+        height: 60px;font-size: 20pt;
+    }
+
+    #inp-p{
+        width:75;
+        height: 47px;
+    }
+
+    #inp-p::placeholder{
+        font-size: 15pt;
+    }
+
+    .card{
+        height: 580px;
+    }
+
+} 
+
+@media only screen and (max-width: 1403px) {
+    
+    [class*="col-10"] {
+      width: 90%;
+    }
+} 
+
+@media only screen and (max-width: 1198px) {
+    
+    [class*="col-10"] {
+      width: 99%;
+    }
+
+    #inp-p, #search{
+        margin-top: 35%;
+    }
+} 
+
+@media only screen and (max-width: 1046px) {
+    
+    [class*="col-10"] {
+      width: 100%;
+    }
+} 
+
+@media only screen and (max-width: 1025px) {
+    
+    [class*="col-3"] {
+      width: 27%;
+    }
+
+    #p2, #p3, #p5, #p6{
+        margin-right: 6.5%;
+    }
+
+    #inp-p::placeholder{
+        font-size: 13pt;
+    }
+
+    .card{
+        font-size: 12pt;
+    }
+}
+
+@media only screen and (max-width: 949px) {
+    
+    [class*="col-3"] {
+      width: 28%;
+    }
+/* 
+    #p2, #p3, #p5, #p6{
+        margin-right: 5%;
+    } */
+} 
+
+@media only screen and (max-width: 915px) {
+    
+    [class*="col-3"] {
+      width: 29%;
+    }
+
+    #p2, #p3, #p5, #p6{
+        margin-right: 4%;
+    }
+} 
+
+@media only screen and (max-width: 884px) {
+    
+    [class*="col-3"] {
+      width: 30%;
+    }
+
+    #p2, #p3, #p5, #p6{
+        margin-right: 3.4%;
+    }
+
+    #inp-p{
+        width: 85%;
+        margin-top: 28%;
+    }
+
+    #search{
+        margin-top: 28%;
+    }
+
+    nav{
+        height: 10vh;
+    }
+
+} 
+
+@media only screen and (max-width: 768px) {
+    
+    [class*="col-10"] {
+      width: 85%;
+    }
+    
+    [class*="col-3"] {
+      width: 68%;
+    }
+    
+    [class*="col-5"] {
+      width: 70%;
+    }
+
+    nav{
+        height: 25vh;
+    }
+
+    #inp-p, #search{
+        margin-top: 0;
+    }
+
+    #p2, #p3, #p5, #p6, #p1, #p4{
+        float: none;
+        margin: 0 auto;
+        margin-bottom: 5%;
+    }
+}
+
+@media only screen and (max-width: 737px) {
+    
+    [class*="col-2"] {
+      width: 100%;
+    }
+} 
+
+/* 
+@media only screen and (max-width: 768px) {
+    
+    [class*="col-"] {
+      width: 100%;
+    }
+} 
+*/
