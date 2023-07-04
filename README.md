@@ -1,7 +1,7 @@
 # XPTO - Uma suposta lojinha 
 --
 
-// Corrigir:
+Corrigir:
 
-// • O problema das estrelinhas
-// • Css grid
+• O problema das estrelinhas
+• Css grid
