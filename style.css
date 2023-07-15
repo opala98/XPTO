@@ -1,181 +1,191 @@
-*{
-    font-family: 'Roboto Slab', serif;
+*{ 
+     font-family: 'Roboto Slab', serif; 
+ } 
+  
+  
+ body{ 
+     background-image: linear-gradient(to bottom, rgb(100, 24, 181), rgb(13, 17, 124), rgb(0, 0, 0)); 
+     background-attachment: fixed; 
+ } 
+  
+ nav{ 
+     padding-top: 2%; 
+     margin: 0 auto; 
+     align-items: center; 
+     height: 20vh; 
+     background-color: rgba(0, 0, 0, 0.211); 
+ } 
+  
+ .input{ 
+     margin: 0 auto; 
+     position: relative; 
+     display: flex; 
+     flex-wrap: wrap; 
+     align-items: stretch; 
+     padding-left: 10%; 
+ } 
+  
+ #search{ 
+     width: 12%; 
+     background-image: url(lupa.png); 
+     background-repeat: no-repeat; 
+     background-size: 80% 80%; 
+     background-position: center; 
+     background-color: white; 
+     border: 1px solid #939393; 
+     border-radius: 5px; 
+ } 
+  
+ #search:hover{ 
+     height: 1.5em; 
+     width: 1.5em; 
+     margin-top: -0.8%; 
+ } 
+  
+ #inp-p{ 
+     width: 62%; 
+     border: 1px solid #939393; 
+     border-radius: 5px; 
+     height: 45px; 
+     outline: none; 
+     padding-left: 8px; 
+ } 
+  
+ #inp-p:focus{ 
+     box-shadow: 0px 0px 7px rgb(255, 255, 255); 
+ } 
+  
+ main{ 
+     padding: 2%; 
+     margin: 0 auto; 
+     align-items: center; 
+     height: auto; 
+     display:table; 
+     background-color: rgba(0, 0, 0, 0.211); 
+     color: #fff;  
+ } 
+  
+ aside{ 
+     float: left; 
+     /* position: fixed; */ 
+ } 
+  
+ aside > button, #voltar{ 
+     border-radius: 5px; 
+     background-color: rgb(247, 247, 247); 
+     height: 40px; 
+     border: #b3b3b3 1px solid; 
+     color: #000; 
+ } 
+  
+ .card{ 
+     cursor: pointer; 
+     /* height: 475px;  */
+     background-color: #f9f9f9;
+     display: inline;
+     
+ } 
+  
+ .card-body{ 
+     background-color: #f9f9f900; 
+     text-align: justify; 
+ } 
+  
+ main > section{ 
+     /* float: right;  */
+     color: #000; 
+     margin-bottom: 5%; 
+ } 
+  
+ .valor{ 
+     text-decoration: underline; 
+     font-weight: bold; 
+     font-style: italic; 
+ } 
+  
+ .tipo{ 
+     font-style: italic; 
+ } 
+  
+ .star{ 
+     width: 20px; 
+     cursor: pointer; 
+     float: right; 
+ } 
+  
+ #fav-i{ 
+     float: none; 
+     width: 50px; 
+ } 
+  
+ .promocao > div > .valor{ 
+     color: rgb(67, 216, 34); 
+ } 
+  
+ .exclusivo > div > .valor{ 
+     color: rgb(216, 107, 34); 
+ } 
+  
+ .card-img-top{ 
+     aspect-ratio: 16/9;
+ } 
+
+.todos-produtos{
+  width: 90vw;
+  display: grid;
+  grid-template-columns: 30vw 30vw 30vw;
+  /* align-content: center;
+  align-items: flex-start;
+  flex-direction: row; */
+  justify-content: space-evenly;
+  /* background-color: #fff; */
+  
 }
 
-
-body{
-    background-image: linear-gradient(to bottom, rgb(100, 24, 181), rgb(13, 17, 124), rgb(0, 0, 0));
-    background-attachment: fixed;
+.produto{
+  display: table-cell;
+  margin: 5%;
+  width: 95%;
 }
 
-nav{
-    padding-top: 2%;
-    margin: 0 auto;
-    align-items: center;
-    height: 20vh;
-    background-color: rgba(0, 0, 0, 0.211);
+#p1, #p2, #p3, #p4, #p5, #p6, #p7, #p8{
+  float: none;
+  
 }
-
-.input{
-    margin: 0 auto;
-    position: relative;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: stretch;
-    padding-left: 10%;
-}
-
-#search{
-    width: 12%;
-    background-image: url(img/lupa.png);
-    background-repeat: no-repeat;
-    background-size: 80% 80%;
-    background-position: center;
-    background-color: white;
-    border: 1px solid #939393;
-    border-radius: 5px;
-}
-
-#search:hover{
-    height: 1.5em;
-    width: 1.5em;
-    margin-top: -0.8%;
-}
-
-#inp-p{
-    width: 62%;
-    border: 1px solid #939393;
-    border-radius: 5px;
-    height: 45px;
-    outline: none;
-    padding-left: 8px;
-}
-
-#inp-p:focus{
-    box-shadow: 0px 0px 7px rgb(255, 255, 255);
-}
-
-main{
-    padding: 2%;
-    margin: 0 auto;
-    align-items: center;
-    height: auto;
-    display:table;
-    background-color: rgba(0, 0, 0, 0.211);
-    color: #fff; 
-}
-
-aside{
-    float: left;
-    /* position: fixed; */
-}
-
-aside > button, #voltar{
-    border-radius: 5px;
-    background-color: rgb(247, 247, 247);
-    height: 40px;
-    border: #b3b3b3 1px solid;
-    color: #000;
-}
-
-.card{
-    cursor: pointer;
-    height: 475px;
-    background-color: #f9f9f9;
-}
-
-.card-body{
-    background-color: #f9f9f900;
-    text-align: justify;
-}
-
-main > section{
-    float: right;
-    color: #000;
-    margin-bottom: 5%;
-}
-
-.valor{
-    text-decoration: underline;
-    font-weight: bold;
-    font-style: italic;
-}
-
-.tipo{
-    font-style: italic;
-}
-
-.star{
-    width: 20px;
-    cursor: pointer;
-    float: right;
-}
-
-#fav-i{
-    float: none;
-    width: 50px;
-}
-
-.promocao > div > .valor{
-    color: rgb(67, 216, 34);
-}
-
-.exclusivo > div > .valor{
-    color: rgb(216, 107, 34);
-}
-
-.card-img-top{
-    height: 150px;
-}
-
-#p1, #p4, #p7{
-    float: left;
-    
-}
-
-#p2, #p3, #p5, #p6, #p8{
-    float: right;
-    margin: 0 auto;
-    margin-right: 8.5%;
-}
-
-#p8{
-    margin-right: 42%;
-}
-
-#ampliar{
-    display: none;
-    padding: 0 5% 0 7%;
-}
-
-#img_p{
-    margin: 0 auto;
-    margin-bottom: 5%;
-    width: 700px;
-    clear: both;
-    /* width: 400px; */
-}
-
-#titulo{
-    font-size: 30pt;
-    font-weight: bolder;
-    padding-bottom: 50px;
-}
-
-span > img{
-    margin-top: -3%;
-}
-
-#info {
-    float: right;
-    text-align: justify;
-    margin-right: 50px;
-}
-
-#ficha{
-    clear: both;
-
-}
+  
+ #ampliar{ 
+     display: none; 
+     padding: 0 5% 0 7%; 
+ } 
+  
+ #img_p{ 
+     margin: 0 auto; 
+     margin-bottom: 5%; 
+     aspect-ratio: 16/9; 
+     clear: both; 
+     width: 80vw; 
+ } 
+  
+ #titulo{ 
+     font-size: 30pt; 
+     font-weight: bolder; 
+     padding-bottom: 50px; 
+ } 
+  
+ span > img{ 
+     margin-top: -3%; 
+ } 
+  
+ #info { 
+     float: right; 
+     text-align: justify; 
+     margin-right: 50px; 
+ } 
+  
+ #ficha{ 
+     clear: both; 
+  
+ } 
 
 /*--------------------------- RESPONSIVIDADE -----------------------*/
 
